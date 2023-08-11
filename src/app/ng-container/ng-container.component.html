@@ -1,0 +1,27 @@
+
+<mat-card>
+  <mat-card-content>
+    <!--
+      <ul>
+        <ng-container *ngFor="let user of users">
+          <li *ngIf="user.role=='admin'">
+            {{user.login}}
+          </li>
+        </ng-container>
+      </ul>
+    -->
+    <mat-list>
+      <div mat-subheader>Users</div>
+      <mat-list-item *ngFor="let user of users">
+        <mat-icon matListItemIcon>folder</mat-icon>
+        <div matListItemTitle>{{user.login}}</div>
+        <div matListItemLine>{{user.lastlogin| date}}</div>
+        <button mat-stroked-button color="primary">Save</button>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
+
+
+
